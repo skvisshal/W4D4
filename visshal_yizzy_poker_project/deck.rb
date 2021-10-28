@@ -8,6 +8,7 @@ class Deck
     def initialize
         @deck = []
         populate
+        shuffle
     end
 
     def populate
@@ -16,6 +17,10 @@ class Deck
             @deck << Card.new(suit,symbol,num + 2)
           end
         end    
+    end
+
+    def shuffle
+      @deck.shuffle!
     end
 end
 
